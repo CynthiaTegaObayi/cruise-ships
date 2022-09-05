@@ -5,6 +5,11 @@ describe('Ship', () => {
     });
     it ('has a starting port', () => {
         const ship = new Ship('Dover');
-        expect(ship.startingPort).toEqual('Dover');
+        expect(ship.startingPort).toBe('Dover');
+    })
+    it('can set sail', () => {
+        const ship = new Ship('Dover');
+        ship.setSail();
+        expect(Ship.startingPort).toBeFalsy();
     })
     });
